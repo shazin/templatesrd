@@ -1,0 +1,14 @@
+<html>
+	<head>
+		<title>{{msg "title"}}</title>
+	</head>
+	<body>
+		<h1>{{msg "greeting"}}</h1>
+		<ol>
+			{{#properties}}			
+				<li value="{{propertyId}}">{{propertyPrice}}</li>
+				<p>{{msg type}}</p>				
+			{{/properties}}
+		</ol>
+	</body>
+</html>

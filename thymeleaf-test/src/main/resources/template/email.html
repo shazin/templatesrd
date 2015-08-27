@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+	<head>
+		<title th:text="#{title}"></title>
+	</head>
+	<body>
+		<h1 th:text="#{greeting}"></h1>
+		<ol th:each="property : ${properties}">			
+			<li th:value="${property.propertyId}" th:text="${property.propertyPrice}"></li>
+			<p th:text="#{${property.type}}"></p>		
+		</ol>
+	</body>
+</html>

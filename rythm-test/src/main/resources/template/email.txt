@@ -1,0 +1,19 @@
+@import com.rythm.test.Model 
+
+@args List<Model> properties, String title, String greeting
+
+<html>
+	<head>
+		<title>@title.i18n()</title>
+	</head>
+	<body>
+		<h1>@greeting.i18n()</h1>
+		<ol>
+		@for(Model property:properties) {			
+			<li value="@property.getPropertyId()">@property.getPropertyPrice()</li>
+			<p>@property.getPropertyName().i18n()</p>
+		}		
+		</ol>
+	</body>
+</html>
+
